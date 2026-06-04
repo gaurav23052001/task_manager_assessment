@@ -1,7 +1,5 @@
-// Thin wrapper around fetch for the task API. In development the Vite proxy
-// forwards /api to the backend; in production set VITE_API_BASE_URL to the
-// deployed backend origin.
-const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '';
+
+const BASE_URL = (import.meta.env.VITE_API_BASE_URL);
 
 async function request(path, options = {}) {
   let res;
